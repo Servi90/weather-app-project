@@ -1,0 +1,83 @@
+h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #5774e1;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+.primerBloque {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  border: 1px solid #dcdae5;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 680px;
+}
+.searching {
+  left: 20px;
+}
+.cityUpdate {
+  text-align: center;
+  color: #5774e1;
+}
+.secondBlock {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  border: 1px solid #dcdae5;
+  border-radius: 5px;
+  max-width: 330px;
+  margin-bottom: 20px;
+  padding: 40px;
+}
+.iconGrande {
+  display: block;
+  margin: 0 auto;
+}
+.bigIcon {
+  text-align: center;
+}
+li {
+  list-style: none;
+  color: #5774e1;
+  text-align: right;
+
+  font-size: 15px;
+}
+.temperature {
+  font-size: 40px;
+}
+.bigTemp {
+  color: #5774e1;
+}
+.thirdBlock {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  border: 1px solid #dcdae5;
+  border-radius: 5px;
+  max-width: 330px;
+  margin-bottom: 20px;
+  color: #5774e1;
+  padding: 40px;
+}
+.nuevo {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.segundo {
+  height: 100%;
+}
+.tercero {
+  height: 100%;
+}
+.buttonCurrentPos {
+  text-align: center;
+}
