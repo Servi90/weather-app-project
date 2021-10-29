@@ -4,11 +4,122 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
     <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/345ba25af9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Hello Git</h1>
+    <div class="primerBloque">
+      <h1>
+        <i class="fas fa-temperature-low"></i>
+        Weather Forecast
+      </h1>
+      <div class="container">
+        <form id="search">
+          <div class="row d-flex justify-content-center flex-nowrap">
+            <div class="input-group searchBar">
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress"
+                placeholder="Enter your location"
+              />
+
+              <span class="input-group-append">
+                <button type="submit" class="btn btn-primary searching">
+                  Search
+                </button>
+              </span>
+            </div>
+          </div>
+        </br>
+          <div class="buttonCurrentPos">
+            <button type="submit" class="currentPos" id="current-position-b">
+              Current location
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container nuevo">
+      <div class="row align-items-center justify-content-center height">
+        <div class="col-6 segundo">
+          <div class="secondBlock">
+            <div class="cityUpdate">
+              <h2>Madrid</h2>
+              <p>Last updated:</p>
+              <p id="current-time">Date time display</p>
+            </div>
+            <br />
+            <div class="bigIcon">
+              <img
+                src="images/partly_cloudy.png"
+                alt="partly cloudy icon"
+                width="100"
+                class="iconGrande"
+              />
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="row">
+              <div class="col-6 bigTemp">
+                <span class="temperature" id="big-temperature">17</span>
+                <a href="#" id="celsius">°C |</a>
+                <a href="#" id="farenheit">°F</a>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li><span id="condi-data">Partly cloudy</span></li>
+                  <li>Humidity: <span id ="humi-data">42%</span></li>
+                  <li>Wind: <span id="wind-data">5</span> km/s</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 tercero">
+          <div class="thirdBlock">
+            <div class="row">
+              <div class="col-7" align="center">
+                Tue <br /><img src="images/cloudy.png" /> <br />16° 10°
+              </div>
+              <div class="col-7" align="center">
+                Wed<br /><img src="images/cloudy.png" /> <br />15° 9°
+              </div>
+              <div class="col-7" align="center">
+                Thu<br /><img src="images/sunny.png" /> <br />17° 13°
+              </div>
+              <div class="col-7" align="center">
+                Fri<br /><img src="images/partly_cloudy.png" /><br />18° 13°
+              </div>
+              <div class="col-7" align="center">
+                Sat<br /><img src="images/rain_light.png" width="47" /><br />16°
+                11°
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="src/java.js"></script>
   </body>
 </html>
+
