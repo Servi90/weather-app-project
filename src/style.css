@@ -80,3 +80,8 @@ li {
 .buttonCurrentPos {
   text-align: center;
 }
+.openSource {
+  text-align: center;
+  color: #5774e1;
+  font-size: 16px;
+}
