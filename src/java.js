@@ -41,6 +41,11 @@ function showCityTemp(response) {
   );
   document.querySelector("#condi-data").innerHTML =
     response.data.weather[0].main;
+  let iconElement = document.querySelector("#bigiconweather");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchInput(event) {
@@ -56,7 +61,7 @@ function searchInput(event) {
 let form = document.querySelector("#search");
 form.addEventListener("submit", searchInput);
 
-// Bonus. Display the temperature of our current location
+// Display the temperature of our current location
 
 function searchCurrent(position) {
   let apiKeys = "6d6c3fbb4215106d7c035ce13afdbe56";
