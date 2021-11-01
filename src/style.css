@@ -27,9 +27,9 @@ h2 {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   border: 1px solid #dcdae5;
   border-radius: 5px;
-  max-width: 330px;
-  margin-bottom: 20px;
-  padding: 40px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 680px;
 }
 .iconGrande {
   display: block;
@@ -42,7 +42,6 @@ li {
   list-style: none;
   color: #5774e1;
   text-align: right;
-
   font-size: 15px;
 }
 .temperature {
@@ -55,10 +54,10 @@ li {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   border: 1px solid #dcdae5;
   border-radius: 5px;
-  max-width: 330px;
-  margin-bottom: 20px;
   color: #5774e1;
-  padding: 40px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 680px;
 }
 .nuevo {
   display: flex;
@@ -80,9 +79,4 @@ li {
 }
 .buttonCurrentPos {
   text-align: center;
-}
-.openSource {
-  text-align: center;
-  font-size: 16px;
-  color: #5774e1;
 }
