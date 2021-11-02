@@ -51,18 +51,25 @@ function showCityTemp(response) {
   celsiusTemperature = response.data.main.temp;
 }
 
-function searchInput(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = "6d6c3fbb4215106d7c035ce13afdbe56";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let cityInput = document.querySelector("#inputAddress").value;
   let units = "metric";
-  let apiUrl = `${apiEndpoint}?q=${cityInput}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(showCityTemp);
 }
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#inputAddress");
+  search(cityInput.value);
+}
+
+search("Madrid");
+
 let form = document.querySelector("#search");
-form.addEventListener("submit", searchInput);
+form.addEventListener("submit", handleSubmit);
 
 // Display the temperature of our current location
 
