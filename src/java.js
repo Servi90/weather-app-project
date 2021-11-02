@@ -47,6 +47,8 @@ function showCityTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchInput(event) {
@@ -80,3 +82,26 @@ function currentGps(event) {
 }
 let searchButton = document.querySelector("#current-position-b");
 searchButton.addEventListener("click", currentGps);
+
+// Convert temperature into farenheit and celsius
+
+function displayFarenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#big-temperature");
+  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(farenheitTemperature);
+}
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#big-temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsiusTemperature = null;
+
+let farenheitLink = document.querySelector("#farenheit");
+farenheitLink.addEventListener("click", displayFarenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+searchInput();
