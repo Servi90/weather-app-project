@@ -28,6 +28,32 @@ function currentTime() {
 
 currentTime();
 
+// Display forecast for the next five days
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2 mx-auto" align="center">
+        <div class= "weather-forecast-date" id="day-to-day">${day}</div><br />
+            <img class ="daily-icon" id="icon-forecast" alt="" 
+            src="http://openweathermap.org/img/wn/50d@2x.png" /> <br />
+            <span id="forecast-max">16</span> 
+            <span id="forecast-min">10</span>
+      </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 // Display the temperature and name of any city we search for
 
 function showCityTemp(response) {
