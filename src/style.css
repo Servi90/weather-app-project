@@ -85,6 +85,9 @@ li {
   color: #5774e1;
   font-size: 13px;
 }
-.dailyIcon {
-  text-align: center;
+.celsiusSign {
+  text-decoration: none !important;
+}
+.farenheitSign {
+  text-decoration: none !important;
 }
