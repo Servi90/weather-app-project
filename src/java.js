@@ -41,14 +41,14 @@ function formatDay(timestamp) {
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div id="forecast" class="row">`;
 
   let forecast = response.data.daily;
   forecast.forEach(function (forecastDay, index) {
-    if (index > 0 && index < 6) {
+    if (index > 0 && index < 5) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2 mx-auto" align="center">
+        `<div class="col-3 mx-auto" align="center">
         <div class= "weather-forecast-date" id="day-to-day">${formatDay(
           forecastDay.dt
         )}</div>
